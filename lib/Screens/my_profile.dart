@@ -1,4 +1,6 @@
+// import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
+import 'package:pro_visitor/Screens/contacts.dart';
 
 class MyProfileActivity extends StatelessWidget {
   const MyProfileActivity({Key? key}) : super(key: key);
@@ -70,20 +72,22 @@ class MyProfileActivity extends StatelessWidget {
                         primary: Colors.yellow,
                         onPrimary: Colors.black,
                       ),
-                      child: const Text(' Upgrade to PRO '),
+                      child: const Text('Upgrade to PRO'),
                       onPressed: () {},
                     ),
                   ),
                   Container(
                     width: 280,
                     height: 50,
-                    alignment: Alignment.centerRight,
+                    alignment: Alignment.center,
                     padding: const EdgeInsets.all(5),
                     child: ElevatedButton.icon(
                       icon: const Icon(Icons.privacy_tip),
                       label: Row(
                         children: const [
-                          Center(child: Text("Privacy & Policy")),
+                          Center(
+                            child: Text('Privacy & Policy'),
+                          ),
                           Padding(
                             padding: EdgeInsets.only(left: 80),
                             child: Icon(Icons.arrow_forward_ios),
@@ -171,7 +175,13 @@ class MyProfileActivity extends StatelessWidget {
                           ),
                         ],
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const MyContactActivity()));
+                      },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
