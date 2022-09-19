@@ -45,7 +45,7 @@ class _MyContactPageState extends State<MyContactPage> {
 
   getAllContacts() async {
     List<Contact> contacts =
-        (await ContactsService.getContacts(withThumbnails: false)).toList();
+        (await ContactsService.getContacts(withThumbnails: true)).toList();
     setState(() {
       contacts = contacts;
     });

@@ -1,4 +1,6 @@
 // import 'package:contacts_service/contacts_service.dart';
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:pro_visitor/Screens/contacts.dart';
 
@@ -17,12 +19,12 @@ class MyProfileActivity extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 32),
+              padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   const SizedBox(
-                    height: 24,
+                    height: 0,
                   ),
                   const Center(
                     child: CircleAvatar(
@@ -31,7 +33,7 @@ class MyProfileActivity extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 24,
+                    height: 7,
                   ),
                   const Text(
                     'Name',
@@ -40,7 +42,7 @@ class MyProfileActivity extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 14,
+                    height: 2,
                   ),
                   const Text(
                     '+91 0123456789',
@@ -49,7 +51,7 @@ class MyProfileActivity extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 14,
+                    height: 2,
                   ),
                   const Text(
                     'name@gmail.com',
@@ -58,8 +60,8 @@ class MyProfileActivity extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
-                  ),
+                      //height: 0,
+                      ),
                   Container(
                     alignment: Alignment.center,
                     padding: const EdgeInsets.only(top: 30, bottom: 8),
@@ -79,7 +81,7 @@ class MyProfileActivity extends StatelessWidget {
                   Container(
                     width: 280,
                     height: 50,
-                    alignment: Alignment.center,
+                    alignment: Alignment.centerRight,
                     padding: const EdgeInsets.all(5),
                     child: ElevatedButton.icon(
                       icon: const Icon(Icons.privacy_tip),
